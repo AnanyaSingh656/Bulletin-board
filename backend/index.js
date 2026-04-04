@@ -65,6 +65,12 @@ app.delete('/posts/:id', async (req, res) => {
 });
 
 // ─── START SERVER ──────-
-app.listen(5000, () => {
-  console.log('✅ Backend server running on http://localhost:5000');
+// app.listen(5000, () => {
+//   console.log('✅ Backend server running on http://localhost:5000');
+// });
+
+// process.env.PORT = Render gives its own port number
+// || 5000 = fallback to 5000 on your local machine
+app.listen(process.env.PORT || 5000, () => {
+  console.log('✅ Server running');
 });
