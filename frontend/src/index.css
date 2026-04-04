@@ -1,0 +1,163 @@
+/* ─── GOOGLE FONT ───────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ─── RESET & BASE ──────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* soft gradient background */
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 50%, #fef9e7 100%);
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+/* ─── HEADER ────────────────────────────────────────── */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  /* multicolor gradient text */
+  background: linear-gradient(50deg, #ef5adb, #ff6b6b, #feca57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #999;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #bbb;
+  margin-top: 60px;
+  font-size: 1.1rem;
+}
+
+/* ─── FORM CONTAINER ────────────────────────────────── */
+.form-container {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #ff6b6b; /* red top border */
+}
+
+.form-container h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* ─── INPUTS ────────────────────────────────────────── */
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* border glows when you click on it */
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #48dbfb;
+}
+
+.form-container textarea {
+  height: 100px;
+  resize: none; /* cant resize manually */
+}
+
+/* ─── SUBMIT BUTTON ─────────────────────────────────── */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6bd2e1, #242f8c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.form-container button:hover {
+  opacity: 0.9;
+}
+
+/* ─── POST CARD ─────────────────────────────────────── */
+.post-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  /* border-left color is set dynamically in PostCard.jsx */
+}
+
+.post-card h3 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.post-content {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: #bbb;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+/* ─── LIKE & DELETE BUTTONS ─────────────────────────── */
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.like-btn,
+.delete-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform 0.1s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.like-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+}
+
+.like-btn {
+  background: #ffeaa7; /* yellow */
+  color: #e17055;
+}
+
+.delete-btn {
+  background: #fab1a0; /* salmon pink */
+  color: #d63031;
+}
