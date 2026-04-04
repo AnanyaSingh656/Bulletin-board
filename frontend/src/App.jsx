@@ -30,8 +30,9 @@ import { useState, useEffect } from 'react';
 // axios = makes HTTP requests to our backend
 import axios from 'axios';
 
-import PostForm from './PostForm'; // Components we'll build next
-import PostCard from './PostCard';
+// user-defined components
+import PostForm from './PostForm';  // to add new posts
+import PostCard from './PostCard';  // to show a single post with like/delete button
 
 import './index.css'; // Global styles
 
@@ -43,7 +44,9 @@ function App() {
 
   // ─── FETCH ALL POSTS ON PAGE LOAD ─────────
   useEffect(() => {
-    axios.get('http://localhost:5000/posts') // axios.get sends a GET request to our backend
+    //axios.get('http://localhost:5000/posts') // axios.get sends a GET request to our backend 5000 is only for my local computer
+    //replace it with your real Render backend URL
+    axios.get('https://your-render-url.onrender.com/posts')
       .then(response => {
         setPosts(response.data); // response.data = the array of posts from DB
       })
