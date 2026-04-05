@@ -19,7 +19,8 @@ function PostForm({ onPostCreated }) {  // onPostCreated is the function we rece
 
     // send POST request to our backend with title and content
     // async/await = wait here until backend responds
-    const response = await axios.post('http://localhost:5000/posts', {
+    // axios.post('http://localhost:5000/posts', {  //IGNORE since it was for local PC
+    axios.post('https://bulletinboard-backend-2m1u.onrender.com/posts', {
       title,    // same as title: title
       content,  // same as content: content
     });

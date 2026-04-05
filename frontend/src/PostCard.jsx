@@ -28,7 +28,7 @@ function PostCard({ post, onLike, onDelete }) {
     //   `http://localhost:5000/posts/${post.id}/like`
     // );
 
-    axios.patch(`https://your-render-url.onrender.com/posts/${post.id}/like`)
+    axios.patch(`https://bulletinboard-backend-2m1u.onrender.com/posts/${post.id}/like`)
 
     // backend sends back the updated post with new like count
     // tell App.jsx to update this post in the posts array
@@ -40,7 +40,7 @@ function PostCard({ post, onLike, onDelete }) {
 
     // DELETE request → backend removes this post from DB
     //await axios.delete(`http://localhost:5000/posts/${post.id}`);  IGNORE since it was for local PC
-    axios.delete(`https://your-render-url.onrender.com/posts/${post.id}`)
+    axios.delete(`https://bulletinboard-backend-2m1u.onrender.com/posts/${post.id}`)
 
     // no response data needed — just tell App.jsx which id was deleted
     onDelete(post.id);

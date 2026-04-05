@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     //axios.get('http://localhost:5000/posts') // axios.get sends a GET request to our backend 5000 is only for my local computer
     //replace it with your real Render backend URL
-    axios.get('https://your-render-url.onrender.com/posts')
+    axios.get('https://bulletinboard-backend-2m1u.onrender.com/posts')
       .then(response => {
         setPosts(response.data); // response.data = the array of posts from DB
       })
